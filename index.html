@@ -1,14 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Café do mês</title>
+    <title>Café do Mês</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <h1>Hello world</h1>
+
+    <header>
+        <h1>☕ Café do Mês</h1>
+        <p>Organize quem traz cada item</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Lista de itens essenciais -->
+        <section class="card">
+            <h2>Itens Essenciais</h2>
+
+            <ul id="listaEssenciais">
+                <!-- Populado pelo JS -->
+            </ul>
+
+            <div class="add-box">
+                <input type="text" id="novoEssencial" placeholder="Adicionar item essencial...">
+                <button onclick="addEssencial()">+</button>
+            </div>
+        </section>
+
+        <!-- Lista de participantes -->
+        <section class="card">
+            <h2>Quem vai trazer o quê</h2>
+
+            <ul id="listaParticipantes">
+                <!-- Populado pelo JS -->
+            </ul>
+
+            <div class="add-box">
+                <input type="text" id="participante" placeholder="Nome do participante">
+                <input type="text" id="item" placeholder="O que vai trazer">
+                <button onclick="addParticipante()">Adicionar</button>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="assets/js/app.js"></script>
 </body>
 
 </html>
