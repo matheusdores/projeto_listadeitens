@@ -1,3 +1,4 @@
+/* --- RESET --- */
 * {
     padding: 0;
     margin: 0;
@@ -5,66 +6,92 @@
     font-family: "Poppins", sans-serif;
 }
 
+/* --- FUNDO CAFÉ DARK PREMIUM --- */
 body {
-    background: #f3f4f6;
-    color: #333;
-    padding: 20px;
+    background: #1d140f url('../img/textura-cafe-dark.jpg') no-repeat center center;
+    background-size: cover;
+    /* cobre a tela inteira sem repetir */
+    color: #f1e5d1;
+    padding: 25px;
 }
 
-header {
+/* --- HEADER --- */
+.header {
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(255, 204, 128, 0.15);
 }
 
-header h1 {
-    font-size: 2.4rem;
-    margin-bottom: 5px;
+.logo {
+    width: 80px;
+    opacity: 0.9;
+    margin-bottom: 10px;
 }
 
+.header h1 {
+    font-size: 2.8rem;
+    color: #ffcc80;
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: #d2b18b;
+}
+
+/* --- GRID LAYOUT --- */
 .container {
     display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 26px;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
 }
 
+/* --- CARDS --- */
 .card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 14px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: rgba(35, 25, 20, 0.92);
+    padding: 25px;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 204, 128, 0.15);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+    transition: 0.25s ease-in-out;
 }
 
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.55);
+}
+
+/* --- TÍTULOS --- */
 .card h2 {
     margin-bottom: 15px;
+    color: #ffdd99;
+    font-weight: 600;
 }
 
+/* --- LISTAS --- */
 ul {
     list-style: none;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 li {
-    background: #e5e7eb;
-    padding: 10px;
-    border-radius: 8px;
-    margin-bottom: 8px;
+    background: rgba(255, 244, 230, 0.07);
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
+    border-left: 5px solid #c49b63;
+    color: #f3e4cf;
+    transition: 0.2s;
 }
 
-button {
-    padding: 10px 14px;
-    border: none;
-    background: #4f46e5;
-    color: #fff;
-    border-radius: 10px;
-    cursor: pointer;
+li:hover {
+    background: rgba(255, 244, 230, 0.12);
 }
 
-button:hover {
-    background: #3730a3;
-}
-
+/* --- INPUTS + BOTÕES --- */
 .add-box {
     display: flex;
     gap: 10px;
@@ -72,7 +99,39 @@ button:hover {
 
 .add-box input {
     flex: 1;
-    padding: 10px;
-    border: 1px solid #d1d5db;
+    padding: 12px;
+    border: 1px solid rgba(196, 155, 99, 0.5);
     border-radius: 10px;
+    background: rgba(255, 249, 235, 0.08);
+    color: #ffecd0;
+}
+
+.add-box input::placeholder {
+    color: #c7a98b;
+}
+
+button {
+    padding: 12px 16px;
+    border: none;
+    background: #c49b63;
+    color: #1b120d;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #e8bf85;
+}
+
+/* --- FOOTER COM GRÃOS --- */
+.footer {
+    margin-top: 45px;
+    text-align: center;
+}
+
+.graos {
+    width: 160px;
+    opacity: 0.8;
 }

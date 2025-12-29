@@ -10,7 +10,8 @@
 
 <body>
 
-    <header>
+    <header class="header">
+        <img src="assets/img/cafe-icon.png" class="logo" alt="Ícone de Café">
         <h1>☕ Café do Mês</h1>
         <p>Organize quem traz cada item</p>
     </header>
@@ -21,9 +22,7 @@
         <section class="card">
             <h2>Itens Essenciais</h2>
 
-            <ul id="listaEssenciais">
-                <!-- Populado pelo JS -->
-            </ul>
+            <ul id="listaEssenciais"></ul>
 
             <div class="add-box">
                 <input type="text" id="novoEssencial" placeholder="Adicionar item essencial...">
@@ -35,9 +34,7 @@
         <section class="card">
             <h2>Quem vai trazer o quê</h2>
 
-            <ul id="listaParticipantes">
-                <!-- Populado pelo JS -->
-            </ul>
+            <ul id="listaParticipantes"></ul>
 
             <div class="add-box">
                 <input type="text" id="participante" placeholder="Nome do participante">
@@ -47,6 +44,10 @@
         </section>
 
     </main>
+
+    <footer class="footer">
+        <img src="assets/img/graos.png" class="graos" alt="Grãos de café">
+    </footer>
 
     <script src="assets/js/app.js"></script>
 </body>
