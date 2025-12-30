@@ -10,44 +10,76 @@
 
 <body>
 
-    <header class="header">
-        <img src="assets/img/cafe-icon.png" class="logo" alt="Ícone de Café">
-        <h1>☕ Café do Mês</h1>
-        <p>Organize quem traz cada item</p>
-    </header>
+    <main>
 
-    <main class="container">
+        <!-- TELA 1 - PRESENÇA -->
+        <section id="tela1" class="tela ativa">
 
-        <!-- Lista de itens essenciais -->
-        <section class="card">
-            <h2>Itens Essenciais</h2>
+            <div class="card">
+                <h1>☕ Café Especial - Presença no evento</h1>
 
-            <ul id="listaEssenciais"></ul>
+                <p class="pergunta">Você poderá comparecer no dia 06/10?</p>
 
-            <div class="add-box">
-                <input type="text" id="novoEssencial" placeholder="Adicionar item essencial...">
-                <button onclick="addEssencial()">+</button>
+                <button class="btn" onclick="mostrarTela('tela2')">Sim, irei comparecer</button>
+                <button class="btn vermelho" onclick="mostrarTela('tela2')">Não poderei comparecer</button>
             </div>
+
         </section>
 
-        <!-- Lista de participantes -->
-        <section class="card">
-            <h2>Quem vai trazer o quê</h2>
+        <!-- TELA 2 - ITENS -->
+        <section id="tela2" class="tela">
 
-            <ul id="listaParticipantes"></ul>
+            <div class="card">
+                <h2>LISTA DE ITENS:</h2>
 
-            <div class="add-box">
-                <input type="text" id="participante" placeholder="Nome do participante">
-                <input type="text" id="item" placeholder="O que vai trazer">
-                <button onclick="addParticipante()">Adicionar</button>
+                <ul class="lista">
+                    <li>Refrigerante <span class="ok">✔</span></li>
+                    <li>Bolo <span class="ok">✔</span></li>
+                    <li>Salgadinho <span class="ok">✔</span></li>
+                    <li>Prato <span class="ok">✔</span></li>
+                    <li>Guardanapo <span class="ok">✔</span></li>
+                    <li>Talheres <span class="erro">✘</span></li>
+                </ul>
+
+                <button class="btn" onclick="mostrarTela('tela3')">Avançar</button>
             </div>
+
+        </section>
+
+        <!-- TELA 3 - CONFIRMAÇÃO -->
+        <section id="tela3" class="tela">
+
+            <div class="card">
+                <h2>CONFIRMAÇÃO</h2>
+
+                <p class="pergunta">Você confirma que irá levar XXXX?</p>
+
+                <button class="btn" onclick="mostrarTela('tela4')">Confirmar</button>
+                <button class="btn vermelho" onclick="mostrarTela('tela2')">Voltar</button>
+            </div>
+
+        </section>
+
+        <!-- TELA 4 - CONTATO -->
+        <section id="tela4" class="tela">
+
+            <div class="card">
+                <h2>Contato</h2>
+
+                <div class="form-box">
+                    <label>Nome:</label>
+                    <input type="text" placeholder="Digite seu nome">
+
+                    <label>Telefone:</label>
+                    <input type="text" placeholder="Digite seu telefone">
+                </div>
+
+                <button class="btn" onclick="mostrarTela('tela1')">Finalizar</button>
+            </div>
+
         </section>
 
     </main>
-
-    <footer class="footer">
-        <img src="assets/img/graos.png" class="graos" alt="Grãos de café">
-    </footer>
 
     <script src="assets/js/app.js"></script>
 </body>
