@@ -1,13 +1,14 @@
-// Carrega uma tela dentro do <main id="conteudo">
-function carregarTela(nomeArquivo) {
-    fetch(`assets/views/${nomeArquivo}`)
-        .then(res => res.text())
+function carregarTela(arquivo) {
+    fetch(`assets/views/${arquivo}`)
+        .then(response => response.text())
         .then(html => {
             document.getElementById("conteudo").innerHTML = html;
+        })
+        .catch(error => {
+            console.error("Erro ao carregar tela:", error);
         });
 }
 
-// Carrega a tela inicial automaticamente
-document.addEventListener("DOMContentLoaded", () => {
+window.onload = () => {
     carregarTela("tela1.html");
-});
+};
