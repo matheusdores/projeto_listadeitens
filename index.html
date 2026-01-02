@@ -10,76 +10,7 @@
 
 <body>
 
-    <main>
-
-        <!-- TELA 1 - PRESENÇA -->
-        <section id="tela1" class="tela ativa">
-
-            <div class="card">
-                <h1>☕ Café Especial - Presença no evento</h1>
-
-                <p class="pergunta">Você poderá comparecer no dia 06/10?</p>
-
-                <button class="btn" onclick="mostrarTela('tela2')">Sim, irei comparecer</button>
-                <button class="btn vermelho" onclick="mostrarTela('tela2')">Não poderei comparecer</button>
-            </div>
-
-        </section>
-
-        <!-- TELA 2 - ITENS -->
-        <section id="tela2" class="tela">
-
-            <div class="card">
-                <h2>LISTA DE ITENS:</h2>
-
-                <ul class="lista">
-                    <li>Refrigerante <span class="ok">✔</span></li>
-                    <li>Bolo <span class="ok">✔</span></li>
-                    <li>Salgadinho <span class="ok">✔</span></li>
-                    <li>Prato <span class="ok">✔</span></li>
-                    <li>Guardanapo <span class="ok">✔</span></li>
-                    <li>Talheres <span class="erro">✘</span></li>
-                </ul>
-
-                <button class="btn" onclick="mostrarTela('tela3')">Avançar</button>
-            </div>
-
-        </section>
-
-        <!-- TELA 3 - CONFIRMAÇÃO -->
-        <section id="tela3" class="tela">
-
-            <div class="card">
-                <h2>CONFIRMAÇÃO</h2>
-
-                <p class="pergunta">Você confirma que irá levar XXXX?</p>
-
-                <button class="btn" onclick="mostrarTela('tela4')">Confirmar</button>
-                <button class="btn vermelho" onclick="mostrarTela('tela2')">Voltar</button>
-            </div>
-
-        </section>
-
-        <!-- TELA 4 - CONTATO -->
-        <section id="tela4" class="tela">
-
-            <div class="card">
-                <h2>Contato</h2>
-
-                <div class="form-box">
-                    <label>Nome:</label>
-                    <input type="text" placeholder="Digite seu nome">
-
-                    <label>Telefone:</label>
-                    <input type="text" placeholder="Digite seu telefone">
-                </div>
-
-                <button class="btn" onclick="mostrarTela('tela1')">Finalizar</button>
-            </div>
-
-        </section>
-
-    </main>
+    <main id="conteudo"></main>
 
     <script src="assets/js/app.js"></script>
 </body>
